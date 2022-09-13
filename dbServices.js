@@ -13,12 +13,23 @@ var connection = mysql.createConnection({
   });
   
  const creatTable=()=>{
-    const sql=('CREATE TABLE student;')
+    const sql=('CREATE TABLE admin(username VARCHAR(255), password VARCHAR(255));')
     connection.query(sql,(err,result)=>{
         if(err){throw err}
         else{console.log('table created...')}
     })
  }
- module.exports[
-    creatTable
- ]
+
+ const creatView=()=>{
+   const sql=('CREATE TABLE admin(username VARCHAR(255), password VARCHAR(255));')
+   connection.query(sql,(err,result)=>{
+       if(err){throw err}
+       else{console.log('table created...')}
+   })
+}
+ module.exports=
+ {   creatTable,
+   creatView
+
+}
+ 
