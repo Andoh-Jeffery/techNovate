@@ -30,8 +30,10 @@ app.use(methodOverride('_method'));
 
 // GET REQUESTS
 app.get('/',(req,res)=>{
-  sqlQuery.creatTable();
-  
+  // sqlQuery.creatAdmin_Table();
+  // sqlQuery.alterAdmin_Table();
+  // sqlQuery.creatStu_Table();
+  // sqlQuery.alterStu_Table(); 
   
 })
 app.listen(port, () => console.log(`app listening on pot ${port}`));
