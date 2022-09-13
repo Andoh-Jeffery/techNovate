@@ -29,19 +29,12 @@ app.use(express.static(path.join(__dirname, "./styles")));
 app.use(methodOverride('_method'));
 
 // GET REQUESTS
-<<<<<<< HEAD
 app.get('/',(req,res)=>{
   // sqlQuery.creatAdmin_Table();
   // sqlQuery.alterAdmin_Table();
   // sqlQuery.creatStu_Table();
   // sqlQuery.alterStu_Table(); 
   
-=======
-app.get('/', (req, res) => {
-  sqlQuery.creatTable();
-
-
->>>>>>> f6ab7e9276e45e6fefb2e2aa5f46fbfe9902887a
 })
 // CREATE ACCOUT
 app.post('/login/creat', async (req, res) => {
