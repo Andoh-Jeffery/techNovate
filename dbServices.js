@@ -52,6 +52,7 @@ const alterStu_Table=()=>{
   alterAdmin_Table,
   creatStu_Table,
   alterStu_Table,
+  
 
 
 
