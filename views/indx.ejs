@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%data.forEach(data=>{%>
+
+  
+     <div class="container">
+        <h3>firsname :<%=data.firstname%></h3>
+        <h3>lastname :<%=data.lastname%></h3>
+        <a href="/update?id=<%=data.id%>"><span>update</span></a>
+        <a href="/delete/<%=data.id%>"><span>delete</span></a>
+    </div>
+
+   <%})%>
+</body>
+</html>
