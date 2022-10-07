@@ -34,7 +34,6 @@ app.use('/login',login);
 app.use('/signup',signup);
 
 // GET REQUESTS
-<<<<<<< HEAD
 app.get('/',(req,res)=>{
   // sqlQuery.creatAdmin_Table();
   // sqlQuery.creatStu_Table();
@@ -79,11 +78,6 @@ app.post('/login', async (req, res) => {
           console.log('no');
           res.end();
         }
-=======
-app.get('/', (req, res) => {
-  // sqlQuery.creatTable();
-  res.send("dasboard")
->>>>>>> 201a0d383792198498c99dfc053f4a8001546954
 
 
 })
