@@ -13,20 +13,19 @@ var connection = mysql.createConnection({
     else{console.log("db connected...")}
   });
 router.get('/',(req,res)=>{
-    res.render('index')
+    res.render('irb2')
 })
 router.post('/submit',(req,res)=>{
-    const {q1,q2,q3,q4,q5,q6,q7,q8}= req.body;
+    const {q1,q2,q3,q4,q5,q6,q7,q8,q9,q10}= req.body;
     if(q1,q2,q3,q4,q5,q6,q7,q8){
-        const sql=("INSERT INTO irb_1 VALUES (?,?,?,?,?,?,?,?)" )
-        connection.query(sql,[q1,q2,q3,q4,q5,q6,q7,q8],(data,error)=>{
+        const sql=("INSERT INTO irb_2 VALUES (?,?,?,?,?,?,?,?,?,?)" )
+        connection.query(sql,[q1,q2,q3,q4,q5,q6,q7,q8,q9,10],(data,error)=>{
             if(error){console.log(error)}
             else{console.log('data entered successfully');
-            console.log(data);
+            // res.send('data entered...');
         }
         })
         res.end();
     }
-    connection.end();
 })
 module.exports=router;

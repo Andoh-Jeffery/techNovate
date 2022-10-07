@@ -1,0 +1,110 @@
+
+ body{
+    background-color: #ecebeb;
+    color:  rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: center;
+ }
+
+ .header{
+    color: rgb(255, 157, 0);
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #7b031d;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  text-align: center;
+ }
+
+ 
+.Post{
+    font-size: 18px;
+    color: #ffffff;
+}
+.Post-Details{
+    margin: 0 auto;
+    text-align: center;
+    background-color:  rgb(117, 28, 3);
+    color:  rgb(255, 255, 255);
+    padding: 8px;
+border-radius: 8px;
+margin-top: 10px;
+font-size: medium;
+}
+
+.Post-Details input{
+     display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+
+.instruction{
+    padding: 8px;
+    text-align: left;
+    
+}
+
+
+ .container{
+    width: fit-content;
+    margin: 0 auto;
+    background-color:  #ffffff;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+   padding: 5px;
+}
+
+.form-group{
+    width: 90%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    padding: 20px;
+    text-align: left;
+}
+
+
+.form-group textarea{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.199);
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+  padding: 8px;
+  resize: vertical;
+}
+
+button{
+    padding: 8px;
+    width: 50%;
+  font-size: auto;
+  border-color: rgb(1, 69, 111);
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+    background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+  transition: .3s ease background-color;
+ font-family: 'Times New Roman', Times, serif;
+}
+
+button[type="submit"]:hover{
+    color: black;
+    background-color: rgb(221, 221, 221);
+}
+
+
+.btn{
+    align-content: center;
+}

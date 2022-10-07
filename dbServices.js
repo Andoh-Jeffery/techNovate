@@ -1,17 +1,19 @@
-// const mysql = require('mysql');
+const mysql = require('mysql');
 
-// var connection = mysql.createConnection({
-//     host     : 'localhost',
-//     user     : 'root',
-//     password : '',
-//     database : 'technovate'
-//   });
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    database : 'technovate'
+  });
    
-//   connection.connect((err)=>{
-//     if(err){throw err}
-//     else{console.log("db connected...")}
-//   });
+  connection.connect((err)=>{
+    if(err){throw err}
+    else{console.log("db connected...")}
+  });
 
+const { decodeBase64 } = require('bcryptjs');
+const sql=require('./db');
 
   // Creating the Admin_TABLE
  const creatAdmin_Table=()=>{
