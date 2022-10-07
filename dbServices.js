@@ -23,16 +23,16 @@ var connection = mysql.createConnection({
 
 // Creating the Student_TABLE
 const creatStu_Table=()=>{
-  const sql=('CREATE TABLE Student(User_type VARCHAR(50), ID INT(50) AUTO_INCERMENT PRIMARY KEY, Name VACHAR(50), Index_number INT(10) UNIQUE, Contact INT(10), E_mail VARCHAR(50) UNIQUE, Password VARCHAR(50) UNIQUE, Programme VARCHAR(100), Internship_location VARCHAR(100), School_name VARCHAR(100));')
+  const sql=('CREATE TABLE Student(User_type VARCHAR(50), ID INT(50) AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(50), Index_number INT(10) UNIQUE, Contact INT(10), E_mail VARCHAR(50) UNIQUE, Password VARCHAR(50) UNIQUE, Programme VARCHAR(100), Internship_location VARCHAR(100), School_name VARCHAR(100));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}
   })
 }
-
+ 
 // Creating the Supervisor_TABLE
 const creatSup_Table=()=>{
-  const sql=('CREATE TABLE Supervisor(User_type VARCHAR(50), ID INT(50) AUTO_INCERMENT PRIMARY KEY, Name VACHAR(50), Contact INT(10), E_mail VARCHAR(50) UNIQUE, Password VARCHAR(50) UNIQUE, Assignment_code VARCHAR(10));')
+  const sql=('CREATE TABLE Supervisor(User_type VARCHAR(50), ID INT(50) AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(50), Contact INT(10), E_mail VARCHAR(50) UNIQUE, Password VARCHAR(50) UNIQUE, Assignment_code VARCHAR(10));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}
@@ -41,7 +41,7 @@ const creatSup_Table=()=>{
 
 //Creating the Headtercher_TABLE
 const creatHeadteacher_Table=()=>{
-  const sql=('CREATE TABEL Headteacher(User_type VARCHAR(50), ID INT(50) AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(50), Contact INT(10), E_mail VARCHAR(50) UNIQUE, Password VARCHAR(50) UNIQUE);')
+  const sql=('CREATE TABLE Headteacher(User_type VARCHAR(50), ID INT(50) AUTO_INCREMENT PRIMARY KEY, Name VARCHAR(50), Contact INT(10), E_mail VARCHAR(50) UNIQUE, Password VARCHAR(50) UNIQUE);')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}

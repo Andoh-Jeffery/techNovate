@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const port = process.env.PORT || 4000;
 const app = express();
 
+
 var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
@@ -30,7 +31,7 @@ app.use(methodOverride('_method'));
 
 // GET REQUESTS
 app.get('/',(req,res)=>{
-  // sqlQuery.creatAdmin_Table();
+  //sqlQuery.creatAdmin_Table();
   // sqlQuery.creatStu_Table();
   // sqlQuery.creatSup_Table();
   // sqlQuery.creatHeadteacher_Table();
