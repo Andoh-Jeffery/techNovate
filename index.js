@@ -42,7 +42,7 @@ app.get('/',(req,res)=>{
   // sqlQuery.creatIRB_4_Table();
   // sqlQuery.creatIRB_5_Table();
   // sqlQuery.creatIRB_6_Table();
-  sqlQuery.creatIRB_7_Table();
+  // sqlQuery.creatIRB_7_Table();
 })
 // CREATE ACCOUT
 app.post('/login/creat', async (req, res) => {
