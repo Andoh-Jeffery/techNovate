@@ -10,6 +10,7 @@ const signup=require('./routes/signup');
 const port = process.env.PORT || 4000;
 const app = express();
 
+
 var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
