@@ -85,7 +85,7 @@ const creatIRB_3_Table=()=>{
 
 
 const creatIRB_4_Table=()=>{
-  const sql=('CREATE TABLE IRB_4(Question_1 VARCHAR(150), Question_2 VARCHAR(150), Question_3 VARCHAR(150), Question_4 VARCHAR(150), Question_5 VARCHAR(150), Question_6 VARCHAR(150), Question_7 VARCHAR(150), Question_8 VARCHAR(150));')
+  const sql=('CREATE TABLE IRB_4(Response_1 VARCHAR(150), Response_2 VARCHAR(150));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}
@@ -109,7 +109,7 @@ const creatIRB_6_Table=()=>{
 }
 
 const creatIRB_7_Table=()=>{
-  const sql=('CREATE TABLE IRB_7(Question_1 VARCHAR(150), Question_2 VARCHAR(150), Question_3 VARCHAR(150), Question_4 VARCHAR(150), Question_5 VARCHAR(150), Question_6 VARCHAR(150), Question_7 VARCHAR(150), Question_8 VARCHAR(150));')
+  const sql=('CREATE TABLE IRB_7(Response_1 VARCHAR(150), Response_2 VARCHAR(150), Response_3 VARCHAR(150), Response_4 VARCHAR(150));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}

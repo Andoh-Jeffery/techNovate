@@ -4,8 +4,6 @@ const bcrypt = require('bcryptjs');
 const mysql = require("mysql");
 const sqlQuery = require('./dbServices')
 const methodOverride = require('method-override');
-const login=require('./routes/login');
-const signup=require('./routes/signup');
 
 const port = process.env.PORT || 4000;
 const app = express();
@@ -30,8 +28,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "./styles")));
 app.use(methodOverride('_method'));
-app.use('/login',login);
-app.use('/signup',signup);
 
 // GET REQUESTS
 app.get('/',(req,res)=>{
@@ -46,7 +42,7 @@ app.get('/',(req,res)=>{
   // sqlQuery.creatIRB_4_Table();
   // sqlQuery.creatIRB_5_Table();
   // sqlQuery.creatIRB_6_Table();
-  // sqlQuery.creatIRB_7_Table();
+  sqlQuery.creatIRB_7_Table();
 })
 // CREATE ACCOUT
 app.post('/login/creat', async (req, res) => {
@@ -79,8 +75,10 @@ app.post('/login', async (req, res) => {
           res.end();
         }
 
+      }
+    })
+
+  }
 
 })
-
-
 app.listen(port, () => console.log(`app listening on pot ${port}`));
