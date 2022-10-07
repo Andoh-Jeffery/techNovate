@@ -12,6 +12,9 @@ var connection = mysql.createConnection({
     else{console.log("db connected...")}
   });
 
+const { decodeBase64 } = require('bcryptjs');
+const sql=require('./db');
+
   // Creating the Admin_TABLE
  const creatAdmin_Table=()=>{
     const sql=('CREATE TABLE Admin(User_type VARCHAR(50), ID INT(50) AUTO_INCREMENT PRIMARY KEY, Username VARCHAR(50), E_mail VARCHAR(50) UNIQUE, Password VARCHAR(50) UNIQUE);')

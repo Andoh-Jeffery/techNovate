@@ -1,6 +1,7 @@
 const express=require('express');
 const router=express.Router();
-
+const sql=require('../db');
+sql.connect;
 router.get('/',(req,res)=>{
     res.send('login Form')
 })

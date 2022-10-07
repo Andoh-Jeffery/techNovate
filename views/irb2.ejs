@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRB 2</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="header">
+        <div class="top1"><h1> <b> IRB 2 </b> <strong class="Post"> [POST-OBSERVATION CONFERENCE GUIDE]</strong></h1></div>
+</div> <br> <br><br> <br> <br> 
+<div class="instruction">
+    <b>Instruction:</b>
+<i><b>*</b>The form is to be completed and submitted by the student teacher for independent reflection before the post-observation conference.</i>
+</div>
+    <div class="container">
+        <form action="/irb2/submit" method="POST">
+
+            <div class="Post-Details">
+                <div class="details">
+                    <input type="text" name="class" autofocus placeholder="enter class here!">
+                </div>
+                    
+                <div class="details">
+                    <input type="text" name="subject" placeholder="enter Subject here!"  >
+                </div>
+                
+                     
+                <div class="details">
+                    <input type="text" name="topic" placeholder="enter topic here!">
+                </div>
+
+                <div class="details">
+                    <input type="datetime-local"  name="date"  cursor="pointer">
+                </div>
+                <div class="details" >
+                    <label class="lb">Observation No.</label>
+                     <select name="number" id="number">
+                        <option value="">select</option>
+                         <option value="1">1</option>
+                         <option value="2">2</option>
+                         <option value="3">3</option>
+                         <option value="4">4</option>
+                         <option value="5">5</option>
+                         <option value="6">6</option>
+                         <option value="7">7</option>
+                         <option value="8">8</option>
+                         <option value="9">9</option>
+                         <option value="10">10</option>
+                     </select>
+                </div>
+            </div> 
+                <p class="plann"> <b>Planning for student learning questions:</b></p>
+
+                <div class="form-group">
+                <label>1. What accommodation/adaptations were most successful?</label>
+                    <textarea name="q1"  cols="60" rows="7"   placeholder="write answer here!" required ></textarea>
+                </div> <br>
+
+
+                <div class="form-group">
+                    <label>2. What could you have done differently?</label>
+                         <textarea cols="60" rows="7" placeholder="write answer here!" required name="q2"></textarea>                  
+                        </div> <br>           
+                    
+
+
+                    <div class="form-group">
+                        <label>3a. Was the goal of the lesson communicated to students? </label>
+                             <textarea cols="60" rows="7" placeholder="State answer here!" required name="q3"></textarea>
+                            </div>   <br>
+
+
+
+                        <div class="form-group">
+                            <label>3b. Did students learn what you intended?</label>
+                              <textarea cols="60" rows="7" placeholder="write answer here!" required name="q4"></textarea>
+                            </div><br>
+
+
+
+                            <div class="form-group">
+                                <label>3c. List strengths/weakness of the lesson.</label>
+                                    <textarea cols="60" rows="7" placeholder="Give list here!" required name="q5"></textarea>
+                                </div><br>
+
+
+
+                            <div class="form-group">
+                                <label>4a. Were teaching strategies/methods effective?  Why?</label>
+                                    <textarea cols="60" rows="7" placeholder="write answer here!" required name="q6"></textarea>
+                                </div><br>
+
+
+
+
+                                <div class="form-group">
+                                    <label>4b. Were activities varied and effective? Why?</label>
+                                        <textarea cols="60" rows="7" placeholder="write answer here!" required name="q7"></textarea>
+                                    </div><br>
+
+
+
+                                    <div class="form-group">
+                                        <label></label><p>5a. Did the assessment techniques measure intended student learning?</label>
+                                         <textarea cols="60" rows="7" placeholder="write answer here!" required name="q8"></textarea>
+                    
+                                        </div> <br>
+
+                                        <div class="form-group">
+                                            <label></label><p>5b. What would you have done differently if you taught this lesson again?</label>
+                                             <textarea  cols="60" rows="7" placeholder="write answer here!" required name="q9"></textarea>
+                                            </div> <br>
+
+                                            <div class="form-group">
+                                                <label></label><p>5c. Are there students who need intervention? .... If so, how will you implementing the intervention?</label>
+                                                 <textarea cols="60" rows="7" placeholder="write answer here!" required name="q10"></textarea>
+            
+                                                </div>
+                                                <button type="Submit">Submit</button>
+                                            </form>
+                                            
+                                            </div><br>
+</body>
+</html>

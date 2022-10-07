@@ -4,20 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+    <title name="TechConnect">IRB 1</title>
+    <link rel="stylesheet" href="style1.css">
+</head>  
+
 <body>
-    <%data.forEach(data=>{%>
-
-  
-     <div class="container">
-        <h3>firsname :<%=data.firstname%></h3>
-        <h3>lastname :<%=data.lastname%></h3>
-        <a href="/update?id=<%=data.id%>"><span>update</span></a>
-        <a href="/delete/<%=data.id%>"><span>delete</span></a>
+        <div Class="HeadContainer">
+            <div class="top1"><h1> <b> IRB 1 </b> <strong class="Pre"> [PRE-OBSERVATION CONFERENCE GUIDE]</strong></h1></div>
+    <div class="top1"><h5></h5></div>
     </div>
+<br> <br><br>
+        <div class="instructions">
+        <p> <b>Intructions:</b></p>
+        <p ><i><b>*</b>Please review and complete the questions for <b>"Planning for Student Learning".</b>  They are provided as a quide for the pre observation conference and will serve as an agenda</p> 
+        <p><b>*</b>Submit the pre-observation conference Outline Form and lesson note <b> a day before observation.</b></p></i> 
+    </div>
+        <br>
+        
+        <div class="container">
+            
+            <form action="/irb1/submit" method="POST">
+                <p> <i>The planned date and time to visit class: <input type="datetime-local" autofocus   > </p> <br></i> 
+           <br><b>Planning for student learning questions:</b>
 
-   <%})%>
+
+                <div class="form-group">
+                <label>1. What do you seek to achieve in this lesson?</label>
+                    <textarea name="q1" cols="60" rows="7"  placeholder="write what you seek to achieve here!" required name="q1"></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <label>2. What are the prerequisite knowledge/skills required to accomplish the lesson's goal/objective?</label>
+                         <textarea name="q2" cols="60" rows="7" placeholder="write the prerequisite skills here!" required name="q2"></textarea>                
+                        </div>          
+                    
+
+
+                    <div class="form-group">
+                        <label>3. What adaptation/accommodation will be made for students who do not have the prerequisite knowlwdge/skills? </label>
+                             <textarea name="q3" cols="60" rows="7" placeholder="State adaptions here!"  required name="q3"></textarea>
+                            </div>   <br>
+
+
+
+                        <div class="form-group">
+                            <label>4. What provision will you make for students who have already grasped the content/topic? </label>
+                              <textarea name="q4" cols="60" rows="7" placeholder="write your provision here!"  required name="q4"></textarea>
+                            </div><br>
+
+
+
+                            <div class="form-group">
+                                <label>5. What strategies will you use to achieve the objectives of the lesson?</label>
+                                    <textarea name="q5" cols="60" rows="7" placeholder="Outline strategies here!"  required name="q5"></textarea>
+                                </div><br>
+
+
+                            <div class="form-group">
+                                <label>6. How does the content of this lesson build on what students have already studied?</label>
+                                    <textarea name="q6" cols="60" rows="7" placeholder="write answer here!"  required name="q6"></textarea>
+                                </div><br>
+
+
+                                <div class="form-group">
+                                    <label>7. How does the content of this lesson relate to what the students will be learning in the future?</label>
+                                        <textarea name="q7" cols="60" rows="7" placeholder="write answer here!"  required name="q7"></textarea>
+                                    </div><br>
+
+
+                                    <div class="form-group">
+                                        <label></label><p>8. Have you addressed the needs (eg.gender, culture, language proficiency, skills level, etc) of this particular group of students?</label>
+                                         <textarea name="q8" cols="60" rows="7" placeholder="write answer here!" required name="q8"></textarea>
+                                        </div>                         
+                       <div class="btn"><input type="submit"></input></div> 
+                    </form>
+                 
+        </div>
 </body>
 </html>

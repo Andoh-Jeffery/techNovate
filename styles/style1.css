@@ -1,0 +1,143 @@
+
+body{
+    background-color: #ecebeb;
+    color:  rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.HeadContainer{
+    color: rgb(255, 157, 0);
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #7b031d;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.Pre{
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.container{
+    width: fit-content;
+    margin: 0 auto;
+    background-color:  #ffffff;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+   padding: 5px;
+}
+
+.form-group{
+    width: 90%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    padding: 20px;
+    text-align: left;
+}
+
+.form-group textarea{
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.199);
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+  padding: 8px;
+  resize: vertical;
+}
+
+.btn{
+text-align: center;
+}
+
+
+button{
+    padding: 8px;
+    width: 50%;
+  font-size: auto;
+  border-color: rgb(1, 69, 111);
+  border-radius: 7px;
+  color: black;
+  cursor: pointer;
+    background-color: rgb(255, 255, 255);
+  margin-top: 10px;
+  transition: .3s ease background-color;
+ font-family: 'Times New Roman', Times, serif;
+}
+
+button[type="submit"]:hover{
+    color: black;
+background-color: rgb(243, 243, 243);
+}
+
+
+.instructions{
+    padding: 8px;
+    text-align: left;
+    
+}
+
+
+/*
+.form-group #q1_error,
+.form-group #q2_error,
+.form-group #q3_error,
+.form-group #q4_error,
+.form-group #q5_error,
+.form-group #q6_error,
+.form-group #q7_error,
+.form-group #q8_error,
+.form-group #accept_error{
+    margin-top: 5px;
+    width: 345px;
+    font-size: 18;
+    color: #c62828;
+    background-color: rgba(255, 0, 0, 0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
+
+/*#status{
+    width: 90%;
+    max-width: fit-content;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/*#status.success{
+    background-color: aquamarine;
+    animation: status 4s ease forwards;
+}
+
+/*#status.error{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    animation: status 4s ease forwards;
+}
+
+  /*@keyframes status{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}555555555555555555
