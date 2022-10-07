@@ -31,9 +31,9 @@ app.use(methodOverride('_method'));
 // GET REQUESTS
 app.get('/',(req,res)=>{
   // sqlQuery.creatAdmin_Table();
-  // sqlQuery.alterAdmin_Table();
   // sqlQuery.creatStu_Table();
-  // sqlQuery.alterStu_Table(); 
+  // sqlQuery.creatSup_Table();
+  // sqlQuery.creatHeadteacher_Table();
   
 })
 // CREATE ACCOUT
