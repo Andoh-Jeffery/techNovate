@@ -31,11 +31,18 @@ app.use(methodOverride('_method'));
 
 // GET REQUESTS
 app.get('/',(req,res)=>{
-  //sqlQuery.creatAdmin_Table();
+  // sqlQuery.creatAdmin_Table();
   // sqlQuery.creatStu_Table();
   // sqlQuery.creatSup_Table();
   // sqlQuery.creatHeadteacher_Table();
-  
+  // sqlQuery.creatMentor_Table();
+  // sqlQuery.creatIRB_1_Table();
+  // sqlQuery.creatIRB_2_Table();
+  // sqlQuery.creatIRB_3_Table();
+  // sqlQuery.creatIRB_4_Table();
+  // sqlQuery.creatIRB_5_Table();
+  // sqlQuery.creatIRB_6_Table();
+  // sqlQuery.creatIRB_7_Table();
 })
 // CREATE ACCOUT
 app.post('/login/creat', async (req, res) => {
