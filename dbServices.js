@@ -62,7 +62,7 @@ const creatMentor_Table=()=>{
 
 //Creating the IRB_TABLES
 const creatIRB_1_Table=()=>{
-  const sql=('CREATE TABLE IRB_1(Question_1 VARCHAR(150), Question_2 VARCHAR(150), Question_3 VARCHAR(150), Question_4 VARCHAR(150), Question_5 VARCHAR(150), Question_6 VARCHAR(150), Question_7 VARCHAR(150), Question_8 VARCHAR(150));')
+  const sql=('CREATE TABLE IRB_1(LessonAcheivement VARCHAR(150), PrerequisiteKnowledgeRequiredToAccomplishLesson VARCHAR(150), AdaptationsMadeForStudentsWithoutPrerequisiteSkills VARCHAR(150), ProvisionsMadeForStudentsWhoHaveGrabbedContent VARCHAR(150), StrategiesToBeUsedToAchieveLessonObjective VARCHAR(150), HowContentOfTHeLessonBuildOnWhatStudentsHaveStudied VARCHAR(150), HowContentRelateRelateToFutureLearningOfStudents VARCHAR(150), HaveTheNeedsOfThisParticularGroupsOfStudentsBeenAddressed VARCHAR(150));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}
@@ -71,24 +71,24 @@ const creatIRB_1_Table=()=>{
 
 
 const creatIRB_2_Table=()=>{
-  const sql=('CREATE TABLE IRB_2(Question_1 VARCHAR(150), Question_2 VARCHAR(150), Question_3a VARCHAR(150), Question_3b VARCHAR(150), Question_3c VARCHAR(150), Question_4a VARCHAR(150), Question_4b VARCHAR(150), Question_5a VARCHAR(150), Question_5b VARCHAR(150), Question_5c VARCHAR(150));')
+  const sql=('CREATE TABLE IRB_2(AccomodationThatWereMostSuccessful VARCHAR(150), WhatYouCouldHaveDoneDifferently VARCHAR(150), WasTheLessonGoalCommunicatedToStudents VARCHAR(150), DidStudentsLearnWhatYouIntended VARCHAR(150), StrengthsAndWeaknessesOfLesson VARCHAR(150), WereTeachingStrategiesEffectiveWhy VARCHAR(150), QWereActivitiesVariedAndEffectiveWhy VARCHAR(150), DidAssessmentTechniquesMeasureIntendedStudentsLearning VARCHAR(150), WhatWouldYouHaveDoneDifferentlyIfYouWereToTeachThisLessonAgain VARCHAR(150), AreThereStudentsWhoNeedIntervention VARCHAR(150));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}
   })
 }
 
-// const creatIRB_3_Table=()=>{
-//   const sql=('CREATE TABLE IRB_3(Question_1 VARCHAR(150), Question_2 VARCHAR(150), Question_3 VARCHAR(150), Question_4 VARCHAR(150), Question_5 VARCHAR(150), Question_6 VARCHAR(150), Question_7 VARCHAR(150), Question_8 VARCHAR(150));')
-//   connection.query(sql,(err,result)=>{
-//       if(err){throw err}
-//       else{console.log('table created...')}
-//   })
-// }
+const creatIRB_3_Table=()=>{
+  const sql=('CREATE TABLE IRB_3(Question_1 VARCHAR(150), Question_2 VARCHAR(150), Question_3 VARCHAR(150), Question_4 VARCHAR(150), Question_5 VARCHAR(150), Question_6 VARCHAR(150), Question_7 VARCHAR(150), Question_8 VARCHAR(150));')
+  connection.query(sql,(err,result)=>{
+      if(err){throw err}
+      else{console.log('table created...')}
+  })
+}
 
 
 const creatIRB_4_Table=()=>{
-  const sql=('CREATE TABLE IRB_4(Response_1 VARCHAR(150), Response_2 VARCHAR(150));')
+  const sql=('CREATE TABLE IRB_4(Strengths VARCHAR(150), AreasForDevelopment VARCHAR(150));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}
@@ -96,23 +96,23 @@ const creatIRB_4_Table=()=>{
 }
 
 const creatIRB_5_Table=()=>{
-  const sql=('CREATE TABLE IRB_5(Question_1 VARCHAR(150), Question_2 VARCHAR(150), Question_3 VARCHAR(150), Question_4 VARCHAR(150), Question_5 VARCHAR(150), Question_6 VARCHAR(150), Question_7 VARCHAR(150), Question_8 VARCHAR(150));')
+  const sql=('CREATE TABLE IRB_5(EssentialStrenghtsOfTheLesson VARCHAR(150), HowDidTheWayYouTaughtMatchYourBelieveOfTeachingAndLearning VARCHAR(150), DoYouThinkTheLessonWasSuccessful VARCHAR(150), WhatConditionsWereImportantToTheOutcome VARCHAR(150), TheUnanticipatedLessonoutcomesThatResultedFromTheLesson VARCHAR(150), CanYouThinkOfAnotherWayYouMightHaveTaughtThisLesson VARCHAR(150), DoYouThinkTheContentCoveredWsImportantToTheStudents VARCHAR(150), WhatDidYouLearnFromTheLesson VARCHAR(150));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}
   })
 }
 
-// const creatIRB_6_Table=()=>{
-//   const sql=('CREATE TABLE IRB_6(Question_1 VARCHAR(150), Question_2 VARCHAR(150), Question_3 VARCHAR(150), Question_4 VARCHAR(150), Question_5 VARCHAR(150), Question_6 VARCHAR(150), Question_7 VARCHAR(150), Question_8 VARCHAR(150));')
-//   connection.query(sql,(err,result)=>{
-//       if(err){throw err}
-//       else{console.log('table created...')}
-//   })
-// }
+const creatIRB_6_Table=()=>{
+  const sql=('CREATE TABLE IRB_6(Activity VARCHAR(150), Performance VARCHAR(150));')
+  connection.query(sql,(err,result)=>{
+      if(err){throw err}
+      else{console.log('table created...')}
+  })
+}
 
 const creatIRB_7_Table=()=>{
-  const sql=('CREATE TABLE IRB_7(Response_1 VARCHAR(150), Response_2 VARCHAR(150), Response_3 VARCHAR(150), Response_4 VARCHAR(150));')
+  const sql=('CREATE TABLE IRB_7(InternsGeneralPerformance VARCHAR(150), MentorsPerformance VARCHAR(150), OverallEvaluationOfTheProgramme VARCHAR(150), AnyOtherSuggestion VARCHAR(150));')
   connection.query(sql,(err,result)=>{
       if(err){throw err}
       else{console.log('table created...')}
@@ -127,9 +127,9 @@ const creatIRB_7_Table=()=>{
     creatMentor_Table,
     creatIRB_1_Table,
     creatIRB_2_Table,
-    creatIRB_3_Table,
+    // creatIRB_3_Table,
     creatIRB_4_Table,
     creatIRB_5_Table,
-    creatIRB_6_Table,
+  creatIRB_6_Table,
     creatIRB_7_Table
   }
