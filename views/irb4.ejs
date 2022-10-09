@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="utf-8"><br>
+		<title> IRB 4 </title>
+		<link rel="stylesheet" href="style4.css">
+	</head>
+	<body>
+		<div class="Heading">
+			<div class="top1"><h1> <b> IRB 4 </b> <strong class="Post"> [TEACHING EVALUATION COMMENTS]</strong></h1></div>
+		<h5></h5>
+		</div> <br> <br> <br><br><br>
+		<div class="form1">
+			<form action="/irb4/submit" method="POST">
+				<div class="DetailsContainer">
+			
+					<table class="rib4">
+						<tr><td>Name of student</td><td class="d2">display name</td></tr>
+						<tr><td>Student Index No.</td><td class="d2">display ID</td></tr>
+						<tr><td>Department</td><td class="d2">display dept</td></tr>
+						<tr><td>School of Practice</td><td class="d2">display school name</td></tr>
+						<tr><td>Subject Area of Supervisor/Mentor</td><td class="d2">display Sub Area for Supervisor</td></tr>
+						<tr><td>Town/Region</td><td>
+							<select name="number" id="number">
+								<option value="">select Region</option>
+								 <option value="Ahafo">Ahafo</option>
+								 <option value="Ashanti">Ashanti</option>
+								 <option value="Bono East">Bono East</option>
+								 <option value="Brong Ahafo">Brong Ahafo</option>
+								 <option value="Central">Central</option>
+								 <option value="Eastern">Eastern</option>
+								 <option value="Greater Accra">Greater Accra</option>
+								 <option value="North East">North East</option>
+								 <option value="Northern">Northern</option>
+								 <option value="Oti">Oti</option>
+								 <option value="Savannah">Savannah</option>
+								 <option value="Upper East">Upper East</option>
+								 <option value="Upper West">Upper West</option>
+								 <option value="Western">Western</option>
+								 <option value="Western North">Western North</option>
+								 <option value="volta">Volta</option>
+							 </select>
+						</td></tr>
+						<tr><td>Lesson/Topic</td><td><input type="text" placeholder="Enter Topic Here!"></td></tr>
+				
+				</table>
+					</div>
+<p><strong>____________________________________________________________________</strong></p>
+		<div class="h1"><h2> COMMENTS </h2> </div> 
+						
+						<div class="form-group">
+                <label>STRENGTHS</label>
+                    <textarea  cols="30" rows="7"  autofocus placeholder="Write about teacher studuent's strengths" required name="q1"></textarea>
+                </div> <br>
+
+				<div class="form-group">
+				<label>AREAS FOR DEVELOPMENT</label>
+				<textarea   cols="30" rows="7"  autofocus placeholder="Write about Department" required name="q2"></textarea>
+			</div>
+			<br> <br>
+				<div class="rib4DContainer">
+					<label> Name of Supervisor</label> &nbsp; &nbsp; &nbsp; &nbsp;
+					<input type="text" placeholder="enter name here!">
+					<br> <br>
+				 </div><br>
+				 <div class="btn">
+					<button type="submit">submit</button>
+				</div>			
+				 </form>	
+				</div>
+	</body>
+</html>

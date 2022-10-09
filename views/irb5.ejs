@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRB 5</title>
+    <link rel="stylesheet" href="style5.css">
+ 
+</head>
+<body>
+    <div class="header">
+        <div class="top1"><h1> <b> IRB 5 </b> <strong class="Post"> [REFLECTION LOG FORM]</strong></h1></div>
+</div> <br> <br><br> <br> <br> 
+        
+
+        <div class="container">
+            <form action="/irb5/submit" method="POST">
+
+                <div class="info">
+                    <input type="text"  autofocus placeholder="Please enter your name..."  >  
+                    <div class="info">
+                    <input type="datetime-local" >
+                    <br>
+                    </div>
+                </div> <br>
+                <p class="sample"> <b>Sample of reflection analysis questions</b></p>
+            <br>
+
+                <div class="form-group">
+                <label>1. What were the essential strengths of the lesson?</label>
+                    <textarea  cols="60" rows="7"   placeholder="write what you seek to achieve here!"  required name="q1"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>2. How did the way you taught the lesson match with your beliefs about teaching and learning?</label>
+                         <textarea cols="60" rows="7" placeholder="write the prerequisite skills here!"  required name="q2"></textarea>                 
+                        </div>
+                    <div class="form-group">
+                        <label>3. Do you think the lesson was successful and if so why?</label>
+                             <textarea cols="60" rows="7" placeholder="State adaptions here!"  required name="q3"></textarea>
+                            </div> 
+                        <div class="form-group">
+                            <label>4. What conditions were important to the outcomes?</label>
+                              <textarea cols="60" rows="7" placeholder="write your provision here!" name="q4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>5. What unanticipated learning outcomes resulted from the lesson? </label>
+                                    <textarea cols="60" rows="7" placeholder="Outline strategies here!"  required name="q5"></textarea>
+                                </div>
+                            <div class="form-group">
+                                <label>6. Can you think of another way you might have taught this lesson?</label>
+                                    <textarea cols="60" rows="7" placeholder="write answer here!"  required name="q6"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>7. Do you think the content covered was important to the students?</label>
+                                        <textarea cols="60" rows="7" placeholder="write answer here!"  required name="q7"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label></label><p>8. What did you learn from the lesson?</label>
+                                         <textarea cols="60" rows="7" placeholder="write answer here!"  required name="q8"></textarea>
+                                        </div>
+                                <div class="btn">  <button type="Submit">Submit</button> </div>
+                    </form>
+                 </div>
+                 <script src="ref.js"></script>
+</body>
+</html>

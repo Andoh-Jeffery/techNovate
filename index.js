@@ -5,6 +5,12 @@ const mysql = require("mysql");
 const sqlQuery = require('./dbServices')
 const methodOverride = require('method-override');
 
+const irb1=require('./routes/forms/irb1')
+const irb2=require('./routes/forms/irb2')
+const irb4=require('./routes/forms/irb4')
+const irb5=require('./routes/forms/irb5')
+const irb7=require('./routes/forms/irb7')
+
 const port = process.env.PORT || 4000;
 const app = express();
 
@@ -28,6 +34,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "./styles")));
 app.use(methodOverride('_method'));
+
+app.use('/irb1',irb1)
+app.use('/irb2',irb2)
+app.use('/irb4',irb4)
+app.use('/irb5',irb5)
+app.use('/irb7',irb7)
 
 // GET REQUESTS
 app.get('/',(req,res)=>{

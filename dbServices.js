@@ -127,9 +127,9 @@ const creatIRB_7_Table=()=>{
     creatMentor_Table,
     creatIRB_1_Table,
     creatIRB_2_Table,
-    creatIRB_3_Table,
+    // creatIRB_3_Table,
     creatIRB_4_Table,
     creatIRB_5_Table,
-    creatIRB_6_Table,
+    // creatIRB_6_Table,
     creatIRB_7_Table
   }

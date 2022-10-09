@@ -1,0 +1,119 @@
+* {
+  padding: 0%;
+  margin: 1;
+  height: 100hv;
+}
+body{
+  background-color: rgb(243, 242, 242);
+  color: black;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.Heading{
+  color: rgb(255, 157, 0);
+  position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 70px;
+background: #7b031d;
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+z-index: 99;
+text-align: center;
+}
+
+
+.Post{
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.DetailsContainer{
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+table{
+  margin: 0 auto;
+}
+
+tr{
+  padding: 50%;
+}
+
+.d2{
+  color: #b7b7b7;
+}
+button{
+  padding: 8px;
+  width: 50%;
+font-size: auto;
+border-color: rgb(1, 69, 111);
+border-radius: 7px;
+color: black;
+cursor: pointer;
+  background-color: rgb(255, 255, 255);
+margin-top: 10px;
+transition: .3s ease background-color;
+font-family: 'Times New Roman', Times, serif;
+}
+
+button[type="submit"]:hover{
+  color: black;
+  background-color: rgb(221, 221, 221);
+}
+
+.btn{
+  text-align: center;
+}
+
+
+.form-group{
+  width: 90%;
+  margin-top: 0;
+  font-size: 20px;
+
+}
+
+textarea{
+  resize: vertical;
+  align-content: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid ;
+  border-radius: 7px;
+  box-shadow:1px 1px 2px #414141;
+
+}
+
+form{
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  margin: 0 auto;
+  width: fit-content;
+  text-align: left;
+}
+
+
+.details1 input{
+  display: inline-block;
+}
+
+/*input[name="group1"],[name="group2"],[name="group3"]
+,[name="group4"],[name="group5"],[name="group6"],[name="group7"],[name="group8"],[name="group9"]
+,[name="group10"],[name="group11"],[name="group12"],[name="group13"],[name="group14"],[name="group15"]
+,[name="group16"],[name="group17"],[name="group18"],[name="group19"],[name="group20"],[name="group21"]
+,[name="group22"],[name="group23"],[name="group24"],[name="group25"]{
+  accent-color: rgb(103, 0, 0);
+}*/
+
+
+input[class="form-group1"], [class="form-group1"], [class="form-group2"], [class="form-group3"], [class="form-group4"],
+[class="form-group5"]{
+  accent-color: #005e70;
+}
