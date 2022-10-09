@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const mysql = require("mysql");
 const sqlQuery = require('./dbServices')
 const methodOverride = require('method-override');
+const { resolve } = require("path");
 
 const port = process.env.PORT || 4000;
 const app = express();
@@ -27,10 +28,12 @@ app.set("view engine", "ejs");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "./styles")));
+app.use(express.static(path.join(__dirname, "./images")));
 app.use(methodOverride('_method'));
 
 // GET REQUESTS
 app.get('/',(req,res)=>{
+  res.render('login');
   // sqlQuery.creatAdmin_Table();
   // sqlQuery.creatStu_Table();
   // sqlQuery.creatSup_Table();
@@ -46,10 +49,10 @@ app.get('/',(req,res)=>{
 })
 // CREATE ACCOUT
 app.post('/login/creat', async (req, res) => {
-  const { email, password } = req.body;
-  const sql = ("INSERT INTO login VALUES (?,?)");
+  const { usertype, username,email, password } = req.body;
+  const sql = ("INSERT INTO admin VALUES (?,?,?,?)");
   const hashpwd = await bcrypt.hash(password, 12);
-  connection.query(sql, [email, hashpwd], (err, result) => {
+  connection.query(sql, [usertype, username, email, hashpwd], (err, result) => {
     if (!err) {
       console.log('acc created successfully');
       res.send('acc created successfully');
@@ -60,22 +63,23 @@ app.post('/login/creat', async (req, res) => {
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
   if (email && password) {
-    const sql = ('SELECT password FROM login WHERE username= ?');
-    connection.query(sql, email, (err, result) => {
-      if (err) {
+    const sql = ('SELECT * FROM admin WHERE E_mail= ?');
+    connection.query(sql, email,async (err, result) => {
+      if (err){
         console.log(err);
-      } else {
-        const pass_hash = result[0]["password"];
-        const verified = bcrypt.compareSync(password, pass_hash);
-        if (verified) {
-          console.log('yes');
-          res.end();
-        } else {
-          console.log('no');
-          res.end();
+      }else{
+        const passHash=result[0].Password;
+        console.log(passHash);
+        const password=req.body.password;
+        const verified=await bcrypt.compare(password,passHash);
+        console.log(verified);
+        if(verified){
+          res.send('yes')
+        }else{
+          res.send("no")
         }
-
       }
+      
     })
 
   }

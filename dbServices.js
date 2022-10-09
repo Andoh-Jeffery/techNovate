@@ -1,5 +1,7 @@
 const mysql = require('mysql');
 
+
+// Create connection
 var connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
@@ -7,6 +9,7 @@ var connection = mysql.createConnection({
     database : 'technovate'
   });
    
+  // Connect  
   connection.connect((err)=>{
     if(err){throw err}
     else{console.log("db connected...")}
