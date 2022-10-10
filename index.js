@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const bcrypt = require('bcryptjs');
+const session =require('express-session')
 const mysql = require("mysql");
 const sqlQuery = require('./dbServices')
 const methodOverride = require('method-override');
@@ -43,6 +44,31 @@ app.use('/irb4',irb4)
 app.use('/irb5',irb5)
 app.use('/irb7',irb7)
 
+// 
+app.use(session({
+  secret:"secret",
+  resave:false,
+  saveUninitialized:false,
+})
+);
+
+// 
+const isAuth = (req, res, next) => {
+  if (req.session.isAuth) {
+    next();
+  }else{res.render('login')}
+};
+
+const isAuthorize=(req,res,next)=>{
+  if(req.session.usertype='admin'){
+    res.send("admin")
+    console.log('admin');
+  }else if(req.session.usertype='student'){
+    console.log("student")
+  }else{
+    console.log("supervisor");
+  }
+}
 // GET REQUESTS
 app.get('/',(req,res)=>{
   res.render('login');
@@ -77,16 +103,20 @@ app.post('/login', async (req, res) => {
   if (email && password) {
     const sql = ('SELECT * FROM admin WHERE E_mail= ?');
     connection.query(sql, email,async (err, result) => {
+      // console.log(result);
       if (err){
         console.log(err);
       }else{
-        const passHash=result[0].Password;
-        console.log(passHash);
+        const passHash=result[0]["Password"];
+        // console.log(passHash);
         const password=req.body.password;
         const verified=await bcrypt.compare(password,passHash);
-        console.log(verified);
+        // console.log(verified);
+        // console.log(password);
         if(verified){
-          res.send('yes')
+          req.session.isAuth=true;
+          req.session.usertype=result[0]["User_type"]
+          res.render('dashboard')
         }else{
           res.send("no")
         }
@@ -95,6 +125,18 @@ app.post('/login', async (req, res) => {
     })
 
   }
+  else{
+    console.log("fill in the fields");
+  }
 
 })
+app.get('/dashboard',isAuth,(req,res)=>{
+  if(req.session.isAuthorize==='admin'){
+    console.log('admin');
+  }else if(req.session.isAuthorize==='student'){
+    console.log('student');
+  }else {console.log('supervisor');}
+
+})
+
 app.listen(port, () => console.log(`app listening on pot ${port}`));

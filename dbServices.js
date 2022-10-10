@@ -130,13 +130,9 @@ const creatIRB_7_Table=()=>{
     creatMentor_Table,
     creatIRB_1_Table,
     creatIRB_2_Table,
-    // creatIRB_3_Table,
+    creatIRB_3_Table,
     creatIRB_4_Table,
     creatIRB_5_Table,
-<<<<<<< HEAD
-    // creatIRB_6_Table,
-=======
   creatIRB_6_Table,
->>>>>>> d13805e503035a9ddd207f4af388ec1e912a56b6
     creatIRB_7_Table
   }
